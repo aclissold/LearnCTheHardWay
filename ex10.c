@@ -11,6 +11,10 @@ int main(int argc, char *argv[])
     begin = clock();
     for(i = 1; i < argc; i++) {
         printf("arg %d: %s\n", i, argv[i]);
+        if(i == argc - 1) {
+            printf("All args printed; exiting loop.\n");
+            break;
+        }
     }
 
     // let's make our own array of strings
@@ -22,6 +26,10 @@ int main(int argc, char *argv[])
 
     for(i = 0; i < num_states; i++) {
         printf("state %d: %s\n", i, states[i]);
+        if(i == num_states - 1) {
+            printf("All states printed; exiting loop.\n");
+            break;
+        }
     }
     end = clock();
     time_spent = (double)(end - begin) / CLOCKS_PER_SEC;

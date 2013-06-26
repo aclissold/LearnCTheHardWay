@@ -8,6 +8,10 @@ int main(int argc, char *argv[])
     while(i < argc) {
         printf("arg %d: %s\n", i, argv[i]);
         i++;
+        if(i == argc) {
+            printf("All args printed; exiting loop.\n");
+            break;
+        }
     }
 
     // let's make our own array of strings
@@ -21,6 +25,10 @@ int main(int argc, char *argv[])
     while(i < num_states) {
         printf("state %d: %s\n", i, states[i]);
         i++;
+        if(i == num_states) {
+            printf("All states printed; exiting loop.\n");
+            break;
+        }
     }
 
     return 0;
